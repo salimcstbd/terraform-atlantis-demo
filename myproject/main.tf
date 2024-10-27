@@ -5,6 +5,14 @@ terraform {
       version = "~> 5.0"
     }
   }
+  backend "s3" {
+    bucket  = "terraform-bd-atlantis"
+    key     = "atlantis/terraform.tfstate"
+    region  = "us-east-1"
+    profile   = "default"
+   
+  }
+
 }
 
 # Configure the AWS Provider
