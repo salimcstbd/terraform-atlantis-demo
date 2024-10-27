@@ -43,5 +43,6 @@ resource "aws_instance" "web" {
   tags = {
     Name = "atlantis-server"
     env = "development"
+    owner = "DevOps"
   }
 }
